@@ -1,0 +1,293 @@
+@font-face {
+  font-family: 'Breaking Road';
+  src: url('fonts/Breaking Road.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bad Script';
+  src: url('fonts/BadScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-image: url('images/DSC06808.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
+}
+.nav-links li {
+  margin: 0;
+}
+.nav-links a {
+  display: block;
+  padding: 30px 16px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: all ease-in-out 100ms;
+}
+.nav-links a:hover {
+  color: #ffcc00;
+  text-shadow: 0 0 5px #ffcc00;
+  transform: scale(1.1);
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1001;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #ffcc00;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 250px auto 0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.container-location, .container-registry, .container-rsvp {
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto 0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.RSVP, .rsvp-link {
+  display: flex;
+  justify-content: center;
+}
+.registry {
+  display: flex;
+  justify-content: center;
+}
+.container-registry script {
+  border-radius: 10px;
+}
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.map iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+h1 {
+  font-family: 'Breaking Road', serif;
+  font-size: 2.5rem;
+}
+h2 {
+  font-family: 'Breaking Road', serif;
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 30px 280px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 0;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+p {
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    /* Glassy white background */
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 20px;
+  }
+
+  .nav-links a:hover {
+    color: #ffcc00;
+    text-shadow: 0 0 5px #ffcc00;
+    transform: scale(1.05);
+  }
+}
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+.hotel-card {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+.hotel-card:hover {
+  transform: translateY(-5px);
+}
+.hotel-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+}
+.hotel-card p {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+.hotel-distance {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.hotel-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #ffcc00;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.hotel-button:hover {
+  background-color: #ffd633;
+  box-shadow: 0 0 10px #ffcc00;
+}
+.faq-accordion {
+  max-width: 700px;
+  margin: 40px auto 0;
+}
+.faq-item {
+  margin-bottom: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  padding: 22px 25px;
+  font-size: 1.25rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.faq-question:hover {
+  color: #ffcc00;
+}
+.arrow {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 25px;
+}
+.faq-answer p {
+  font-size: 1.2rem;
+  margin: 15px 0 25px;
+}
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+.faq-item.active .arrow {
+  transform: rotate(45deg);
+}

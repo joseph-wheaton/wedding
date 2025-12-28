@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ</title>
+    <link rel="icon" href="/images/wedding-rings-wedding-svgrepo-com.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home-page.html">Home</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="travel.html">Travel</a></li>
+        <li><a href="registry.html">Registry</a></li>
+        <li><a href="rsvp.html">RSVP</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="container-location">
+      <h1>Frequently Asked Questions</h1>
+
+      <div class="faq-accordion">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What is the dress code?
+            <span class="arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Garden attire. We recommend suits, dresses, and comfortable shoes for dancing.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Which airport should I fly into?
+            <span class="arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We recommend flying into Charlotte Douglas International Airport (CLT)</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      });
+
+      const questions = document.querySelectorAll('.faq-question');
+
+      questions.forEach((question) => {
+        question.addEventListener('click', () => {
+          const item = question.parentElement;
+          item.classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
+</html>
