@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Isabel & Joey's Wedding</title>
+    <link
+      rel="icon"
+      href="/images/wedding-rings-wedding-svgrepo-com.svg"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="travel.html">Travel</a></li>
+        <li><a href="registry.html">Registry</a></li>
+        <li><a href="rsvp-page.html">RSVP</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="container-rsvp">
+      <h1 class="RSVP">RSVP</h1>
+      <div class="rsvp-link">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScufFsNJjNv0FJZGTFErHuDENjWAUNCiIG7RpXO9bfdW6ImxQ/viewform?embedded=true" style="width: 640px; height: 959px;" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </div>
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      });
+    </script>
+  </body>
+</html>
